@@ -3,7 +3,7 @@ OBJS = conntrack-flush.o
 LIBS = -lnetfilter_conntrack -lnfnetlink -lmnl
 
 conntrack-flush: $(OBJS)
-	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LIBS)
+	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LDFLAGS) $(LIBS)
 
 .PHONY: clean
 
